@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./frontend/login.js"></script>
+    </head>
+    <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <body style="background-color: lightpink;">
+        <div class="container">            
+            <h2 style="color: skyblue;">LOGIN</h2>
+                <form id="loginForm" method="POST" enctype="multipart/form-data" style="background-color: lightgrey;">
+
+                    <div class="form-group mb-3">
+                        <label for="mailLogin">Correo</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            <input name="mailLogin" id="mailLogin" class="form-control" type="email" placeholder="Correo">
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="claveLogin">Clave</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            <input name="claveLogin" id="claveLogin" class="form-control" type="password" placeholder="Contrase&ntilde;a"> 
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center mb-3">
+                        <button class="btn btn-primary col-5" type="button" id="btnEnviar" onclick="Validar()">
+                            Enviar
+                        </button>
+                        <span class="col-2"></span>
+                        <button class="btn btn-warning col-5" type="reset">
+                            Limpiar
+                        </button>
+                    </div> 
+
+                    <div class="form-group text-center mb-3">
+                        <button class="btn btn-success col-12" style="margin-bottom: 2%;" type="button" id="btnRegistrar" onclick="registrarme()">
+                            Quiero registrarme!
+                        </button>
+                    </div>
+
+                    <div class="alert alert-danger" id="errorLogin" hidden>No se encontro el usuario</div>
+                </form>
+        </div>
+        
+        
+    </body>
+</html>
